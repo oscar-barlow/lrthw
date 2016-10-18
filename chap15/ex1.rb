@@ -8,6 +8,7 @@ txt = open(filename)
 puts "Here's your file #{filename}:"
 # apply the 'read' method, which is a File method, to txt
 print txt.read
+txt.close()
 
 # user prompt
 puts "Type the filename again: "
@@ -19,3 +20,4 @@ txt_again = open(file_again)
 
 # ... and again
 print txt_again.read
+txt_again.close()
