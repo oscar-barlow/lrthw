@@ -3,7 +3,8 @@ puts "You enter a dark room with two doors.  Do you go through door #1 or door #
 print "> "
 door = $stdin.gets.chomp
 
-if door == "1"
+case door
+when "1" then
   puts "There's a giant bear here eating a cheese cake.  What do you do?"
   puts "1. Take the cake."
   puts "2. Scream at the bear."
@@ -19,7 +20,7 @@ if door == "1"
     puts "Well, doing %s is probably better.  Bear runs away." % bear
   end
 
-elsif door == "2"
+when "2" then
   puts "You stare into the endless abyss at Cthulhu's retina."
   puts "1. Blueberries."
   puts "2. Yellow jacket clothespins."
