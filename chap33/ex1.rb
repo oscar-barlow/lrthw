@@ -1,4 +1,4 @@
-def gt_check(n)
+def gt_check(n, v)
   i = 0
   numbers = []
 
@@ -6,7 +6,7 @@ def gt_check(n)
     puts "At the top i is #{i}"
     numbers.push(i)
 
-    i += 1
+    i += v
     puts "Numbers now: ", numbers
     puts "At the bottom i is #{i}"
   end
