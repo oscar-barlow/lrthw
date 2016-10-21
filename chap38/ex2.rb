@@ -23,6 +23,21 @@ def shuffled_deck
   shuffled_deck
 end
 
+class ShuffledDeck
+  def initialize
+    @order = shuffled_deck
+  end
+
+  def order
+    @order
+  end
+
+  def delete_card(c)
+    @order.delete(c)
+  end
+
+end
+
 def make_hand(i)
   hand = Array.new
   i.times do
@@ -34,9 +49,8 @@ end
 
 def deal_hand(i)
   line_width = 80
+  h = make_hand(i)
+
   puts "- Your Hand -".center line_width
-  puts make_hand(i).join(" ").center line_width
+  puts h.join(" / ").center line_width
 end
-# Get a shuffled Deck
-# deal cards from the shuffled deck into a hand
-# delete those cards from the shuffled deck
